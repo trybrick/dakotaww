@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
-import { Textarea } from '../components/ui/textarea';
-import { Label } from '../components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
+import { Helmet } from 'react-helmet';
 import { Badge } from '../components/ui/badge';
 import { useToast } from '../hooks/use-toast';
 import { Phone, Mail, Clock, Send, MessageSquare, Calendar, Users } from 'lucide-react';
@@ -154,7 +151,7 @@ const Contact = () => {
               <Card className="border-0 shadow-lg">
                 <CardContent className="p-8">
                   <div style={contactFormStyles} data-fillout-id="toxUZnojnAus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
-                  <script src="https://server.fillout.com/embed/v1/"></script>
+                  <Helmet><script src="https://server.fillout.com/embed/v1/"></script></Helmet>
                 </CardContent>
               </Card>
             </div>
