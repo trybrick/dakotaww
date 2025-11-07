@@ -227,8 +227,8 @@ export const navigationItems = [
 ];
 
 export const contactInfo = {
-  phone: "+1 (512) 555-0100",
-  email: "info@dakotaworldwide.com",
+  phone: "+1 (952) 835-4505",
+  email: "m.pfeifer@dakotaww.com",
   hours: {
     weekdays: "8:00 AM - 6:00 PM CST",
     weekends: "Closed"

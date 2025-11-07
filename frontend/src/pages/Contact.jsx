@@ -22,6 +22,10 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  const contactFormStyles = {
+    width: '100%',
+    height: '500px'
+  };
 
   const handleInputChange = (field, value) => {
     setFormData(prev => ({
@@ -149,114 +153,8 @@ const Contact = () => {
               </h2>
               <Card className="border-0 shadow-lg">
                 <CardContent className="p-8">
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <Label htmlFor="firstName">First Name</Label>
-                        <Input
-                          id="firstName"
-                          value={formData.firstName}
-                          onChange={(e) => handleInputChange('firstName', e.target.value)}
-                          required
-                          className="mt-1"
-                        />
-                      </div>
-                      <div>
-                        <Label htmlFor="lastName">Last Name</Label>
-                        <Input
-                          id="lastName"
-                          value={formData.lastName}
-                          onChange={(e) => handleInputChange('lastName', e.target.value)}
-                          required
-                          className="mt-1"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <Label htmlFor="email">Email Address</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => handleInputChange('email', e.target.value)}
-                        required
-                        className="mt-1"
-                      />
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <Label htmlFor="company">Company</Label>
-                        <Input
-                          id="company"
-                          value={formData.company}
-                          onChange={(e) => handleInputChange('company', e.target.value)}
-                          required
-                          className="mt-1"
-                        />
-                      </div>
-                      <div>
-                        <Label htmlFor="phone">Phone Number</Label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={(e) => handleInputChange('phone', e.target.value)}
-                          className="mt-1"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <Label htmlFor="inquiryType">Inquiry Type</Label>
-                      <Select value={formData.inquiryType} onValueChange={(value) => handleInputChange('inquiryType', value)}>
-                        <SelectTrigger className="mt-1">
-                          <SelectValue placeholder="Select inquiry type" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {inquiryTypes.map((type) => (
-                            <SelectItem key={type} value={type}>
-                              {type}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div>
-                      <Label htmlFor="subject">Subject</Label>
-                      <Input
-                        id="subject"
-                        value={formData.subject}
-                        onChange={(e) => handleInputChange('subject', e.target.value)}
-                        required
-                        className="mt-1"
-                      />
-                    </div>
-
-                    <div>
-                      <Label htmlFor="message">Message</Label>
-                      <Textarea
-                        id="message"
-                        rows={6}
-                        value={formData.message}
-                        onChange={(e) => handleInputChange('message', e.target.value)}
-                        required
-                        className="mt-1"
-                        placeholder="Tell us about your needs and how we can help..."
-                      />
-                    </div>
-
-                    <Button 
-                      type="submit"
-                      size="lg"
-                      className="w-full bg-slate-900 hover:bg-slate-800 text-white"
-                    >
-                      Send Message
-                      <Send className="ml-2 h-4 w-4" />
-                    </Button>
-                  </form>
+                  <div style={contactFormStyles} data-fillout-id="toxUZnojnAus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
+                  <script src="https://server.fillout.com/embed/v1/"></script>
                 </CardContent>
               </Card>
             </div>
