@@ -108,37 +108,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Quick Contact Options */}
-      <section className="py-12 bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-6">
-            {contactMethods.map((method, index) => {
-              const Icon = method.icon;
-              return (
-                <Card key={index} className="border-0 shadow-md group hover:shadow-lg transition-all duration-300 cursor-pointer">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-200 transition-colors duration-300">
-                      <Icon className="h-6 w-6 text-slate-700" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{method.title}</h3>
-                    <p className="text-gray-600 mb-3 text-sm">{method.description}</p>
-                    <Badge variant="secondary" className="mb-3 text-xs">
-                      {method.available}
-                    </Badge>
-                    <Button 
-                      size="sm"
-                      className="w-full bg-slate-900 hover:bg-slate-800 text-white"
-                    >
-                      {method.action}
-                    </Button>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Main Contact Form */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
